@@ -2,6 +2,14 @@
 #include <vector>
 using namespace std;
 
+/*
+MADE BY: HA
+This module implements the Stack DS using a vector the class got 3 methods:
+1. push: to add an element to the top of the stack.
+2. pop: to remove the top element from the stack.
+3. printStack: to print the elements in the stack, the stack size and the top element.
+*/
+
 class Stack{
     private:
         vector<int> stack;
@@ -27,5 +35,14 @@ class Stack{
                 cout << "The stack is empty, Push an element first!" << endl;
                 return;
             }
+        }
+        void printStack(){
+            cout << "Your Stack: " << endl;
+            for (int i = 0;i < stacksize;++i)
+                cout << stack[i] << " ";
+            cout << endl;
+            cout << "Stack size: " << stacksize << endl;
+            cout << "Top element: " << top << endl;
+            cout << endl;
         }
 };
