@@ -89,15 +89,14 @@ class LinkedList{
                 cout << "The list is empty, Insert an element first!" << endl;
                 return;
             }
+            Node* ptr = head;
             if (head->data == value){
-                Node* ptr = head;
                 head = head->next;
                 delete ptr;
                 listSize--;
                 cout << "Deleted: " << value << " from the list." << endl;
                 return;
             }
-            Node* ptr = head;
             while (ptr->next != nullptr && ptr->next->data != value)
                 ptr = ptr->next;
             if (ptr->next == nullptr){
@@ -112,6 +111,10 @@ class LinkedList{
             cout << "Deleted: " << value << " from the list." << endl;
         }
         void printList(){
+            if (head == nullptr){
+                cout << "The list is empty." << endl;
+                return;
+            }
             cout << "Your List: " << endl;
             Node* ptr = head;
             cout << "Head -> ";
