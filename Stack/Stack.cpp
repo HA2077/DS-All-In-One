@@ -8,6 +8,7 @@ This module implements the Stack (INT NUMBERS ONLY) DS using a vector the class 
 1. push: to add an element to the top of the stack.
 2. pop: to remove the top element from the stack.
 3. printStack: to print the elements in the stack, the stack size and the top element.
+(LIFO)
 */
 
 class Stack{
