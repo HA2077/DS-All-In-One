@@ -12,10 +12,10 @@
 As the semester progresses, the following structures will be implemented in sync with the course syllabus:
 
 - [ ] **ArrayList:** Manual implementation of a dynamic array (resizing logic).
-- [ ] **Hash Tables:** Exploring collision resolution (Chaining vs. Open Addressing). [cite: 26]
-- [ ] **Trees:** Binary Search Trees (BST) and traversal algorithms (In-order, Pre-order, Post-order). [cite: 26]
-- [ ] **Priority Queues:** Implementation using Heaps. [cite: 26]
-- [ ] [**Unified TUI:** A Terminal User Interface for real-time visualization of data states.
+- [ ] **Hash Tables:** Exploring collision resolution (Chaining vs. Open Addressing).
+- [ ] **Trees:** Binary Search Trees (BST) and traversal algorithms (In-order, Pre-order, Post-order).
+- [ ] **Priority Queues:** Implementation using Heaps.
+- [ ] **Unified TUI:** A Terminal User Interface for real-time visualization of data states.
     * *Note: Still evaluating whether to use Python for the TUI wrapper or keep it pure C++.*
 
 ## 💻 Tech Stack
