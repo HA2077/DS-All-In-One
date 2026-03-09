@@ -22,8 +22,8 @@ OPs:
 class LinkedList{
     private:
         Node* head;
-    public:
         int listSize = 0;
+    public:
         LinkedList(){
             head = nullptr;
         }
@@ -77,10 +77,11 @@ class LinkedList{
                 return;
             }
             Node* ptr = head;
-            while (ptr->next != nullptr)
+            while (ptr->next->next != nullptr){
                 ptr = ptr->next;
-            ptr = ptr->next;
-            delete ptr;
+            }
+            delete ptr->next;
+            ptr->next = nullptr;
             listSize--;
             cout << "Deleted the last element from the list." << endl;
         }
@@ -99,14 +100,15 @@ class LinkedList{
             }
             while (ptr->next != nullptr && ptr->next->data != value)
                 ptr = ptr->next;
+
             if (ptr->next == nullptr){
                 cout << "Value: " << value << " not found in the list." << endl;
                 return;
             }
-            while(ptr->next->data != value)
-                ptr = ptr->next;
-            ptr = ptr->next;
-            delete ptr;
+
+            Node* remove = ptr->next;
+            ptr->next = remove->next;
+            delete remove;
             listSize--;
             cout << "Deleted: " << value << " from the list." << endl;
         }
@@ -127,20 +129,3 @@ class LinkedList{
             cout << endl;
         }
 };
-
-
-int main(){
-    LinkedList list;
-    list.insertAthestart(5);
-    list.insertAtTheEnd(10);
-    list.insertAtTheEnd(20);
-    list.insertAthestart(3);
-    list.insertAtTheEnd(30);
-    list.insertAthestart(1);
-    list.printList();
-    list.deleteAtTheStart();
-    list.deleteAtTheEnd();
-    list.deletewithval(20);
-    list.printList();
-    return 0;
-}
