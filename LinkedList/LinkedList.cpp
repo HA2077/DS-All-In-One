@@ -43,7 +43,7 @@ class LinkedList{
             if (head == nullptr){
                 head = newNode;
                 listSize++;
-                cout << "Inserted: " << value << " at the start of the list." << endl;
+                cout << "Inserted: " << value << " at the end of the list." << endl;
                 return;
             }
             Node* ptr = head;
@@ -73,7 +73,7 @@ class LinkedList{
                 delete head;
                 head = nullptr;
                 listSize--;
-                cout << "Deleted the first element from the list." << endl;
+                cout << "Deleted the last element from the list." << endl;
                 return;
             }
             Node* ptr = head;
