@@ -7,7 +7,8 @@ MADE BY: HA
 This module implements the Stack (INT NUMBERS ONLY) DS using a vector the class got 3 methods:
 1. push: to add an element to the top of the stack.
 2. pop: to remove the top element from the stack.
-3. printStack: to print the elements in the stack, the stack size and the top element.
+3. peek: to return the top element without removing it.
+4. printStack: to print the elements in the stack, the stack size and the top element.
 (LIFO)
 */
 
@@ -40,6 +41,14 @@ class Stack{
                 return;
             }
             else    top = -1;
+        }
+
+        int peek(){
+            if (stacksize == 0){
+            cout << "The stack is empty, Push an element first!" << endl;
+            return -1;
+            }
+            return top;
         }
 
         void printStack(){
