@@ -3,15 +3,16 @@
 
 ## 🚀 Current Modules
 
-* **Stack:** Implemented using a C++ `std::vector` (LIFO). Includes manual boundary checking to ensure stability during `pop` operations.
-* **Queue:** A **Circular Queue** implementation using a fixed-size array (FIFO). Utilizes modulo arithmetic `(Front + Qsize) % 10` to manage wrap-around logic.
+* **Stack:** Implemented using a custom `ArrayList` (LIFO). Includes manual boundary checking to ensure stability during `pop` operations.
+* **Queue:** Implemented using a custom `ArrayList` (FIFO). Utilizes dynamic resizing to eliminate fixed-size limitations.
+* **Circular Queue:** implementation using a fixed-size array (FIFO). Utilizes modulo arithmetic `(Front + Qsize) % 10` to manage wrap-around logic.
 * **Singly Linked List:** Built using custom `Node` structs and `nullptr` for modern memory safety (C++23 standard). Supports insertion and deletion at both ends and by specific value.
 
 ## 🛠️ Extended Roadmap
 
 As the semester progresses, the following structures will be implemented in sync with the course syllabus:
 
-- [ ] **ArrayList:** Manual implementation of a dynamic array (resizing logic).
+- [x] **ArrayList:** Manual implementation of a dynamic array (resizing logic).
 - [ ] **Hash Tables:** Exploring collision resolution (Chaining vs. Open Addressing).
 - [ ] **Trees:** Binary Search Trees (BST) and traversal algorithms (In-order, Pre-order, Post-order).
 - [ ] **Priority Queues:** Implementation using Heaps.
@@ -21,3 +22,4 @@ As the semester progresses, the following structures will be implemented in sync
 ## 💻 Tech Stack
 * **Language:** C++23 (utilizing `nullptr` and modern standards).
 * **Environment:** Linux / Windows GCC.
+* **Key Improvement:** Stack and Queue now use a custom ArrayList implementation instead of STL vector or fixed arrays.
