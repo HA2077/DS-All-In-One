@@ -5,10 +5,10 @@
 - [x] LinkedList (Singly)
 ## To Implement
 ### Phase 1: Linked List Versions
-- [ ] StackLL - Stack using linked list (LIFO)
+- [x] StackLL - Stack using linked list (LIFO)
 - [ ] QueueLL - Queue using linked list (FIFO)
 ### Phase 2: Additional Data Structures
-- [ ] ArrayList - Dynamic array with manual resizing
+- [x] ArrayList - Dynamic array with manual resizing
 - [ ] DoublyLinkedList - Bidirectional traversal
 - [ ] BST - Binary Search Tree with traversals
 - [ ] HashTable - With collision resolution

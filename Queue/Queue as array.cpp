@@ -1,9 +1,10 @@
 #include <iostream>
+#include "../ArrayList/ArrayList.h"
 using namespace std;
 
 /*
 MADE BY: HA
-This module implements the Queue (INT NUMBERS ONLY) DS using a arrays (array of 10 numbers) the class got 3 methods:
+This module implements the Queue (INT NUMBERS ONLY) DS using ArrayList the class got 3 methods:
 1. Enqueue: to add the item in the queue.
 2. Dequeue: to remove the first item enqueued in the queue.
 3. Display: to print the elements of the queue.
@@ -12,42 +13,30 @@ This module implements the Queue (INT NUMBERS ONLY) DS using a arrays (array of 
 
 class Queue{
     private:
-        int Qsize = 0, Front = 0;
-        int Queuearr[10];
+        ArrayList<int> Queuearr;
     public:
         void Enqueue(int value){
-            if (Qsize == 10){
-                cout << "The queue is full. dequeue an element." << endl;
-                return;
-            }
-            int insertpos = (Front + Qsize) % 10;
-            Queuearr[insertpos] = value;
-            cout << "Added element " << value << " to the queue in pos " << insertpos << endl;
-            Qsize++;
+            Queuearr.add(value);
+            cout << "Added element " << value << " to the queue" << endl;
         }
         void Dequeue(){
-            if (Qsize == 0){
+            if (Queuearr.getSize() == 0){
                 cout << "The queue is empty. Enqueue an element." << endl;
                 return;
             }
-            int Relement = Queuearr[Front];
-            Queuearr[Front] = -1;   // Removed
+            int Relement = Queuearr.get(0);
+            Queuearr.remove(0);
             cout << "Removed Element " << Relement << " From the queue." << endl;
-            Front = (Front + 1) % 10;
-            Qsize--;
         }
         void Display(){
-            if (Qsize == 0){
+            if (Queuearr.getSize() == 0){
                 cout << "The queue is empty. Enqueue an element." << endl;
                 return;
             }
-            int checker = Front;
             cout << "The current queue: ";
-            for(int i = 0;i < Qsize;++i){
-                if (checker == 10)
-                    checker = 0;
-                cout << Queuearr[checker] << " ";
-                checker++;
+            for(int i = 0;i < Queuearr.getSize();++i){
+                cout << Queuearr.get(i) << " ";
             }
+            cout << endl;
         }
 };

@@ -1,10 +1,10 @@
 #include <iostream>
-#include <vector>
+#include "../ArrayList/ArrayList.h"
 using namespace std;
 
 /*
 MADE BY: HA
-This module implements the Stack (INT NUMBERS ONLY) DS using a vector the class got 3 methods:
+This module implements the Stack (INT NUMBERS ONLY) DS using a ArrayList the class got 3 methods:
 1. push: to add an element to the top of the stack.
 2. pop: to remove the top element from the stack.
 3. peek: to return the top element without removing it.
@@ -14,13 +14,13 @@ This module implements the Stack (INT NUMBERS ONLY) DS using a vector the class 
 
 class Stack{
     private:
-        vector<int> stack;
+        ArrayList<int> stack;
     public:
         int top;
         int stacksize = 0;
 
         void push(int value){
-            stack.push_back(value);
+            stack.add(value);
             top = value;
             stacksize++;
             cout << "Pushed: " << value << " to the stack." << endl;
@@ -28,15 +28,15 @@ class Stack{
 
         void pop(){
             if (stacksize == 0){
-            cout << "The stack is empty, Push an element first!" << endl;
-            return;
+                cout << "The stack is empty, Push an element first!" << endl;
+                return;
             }
 
-            stack.pop_back();
+            stack.remove(stacksize - 1);
             stacksize--;
 
             if(stacksize > 0){
-                top = stack[stacksize - 1];
+                top = stack.get(stacksize - 1);
                 cout << "Popped The Top Element From the stack." << endl;
                 return;
             }
@@ -45,8 +45,8 @@ class Stack{
 
         int peek(){
             if (stacksize == 0){
-            cout << "The stack is empty, Push an element first!" << endl;
-            return -1;
+                cout << "The stack is empty, Push an element first!" << endl;
+                return -1;
             }
             return top;
         }
@@ -54,7 +54,7 @@ class Stack{
         void printStack(){
             cout << "Your Stack: " << endl;
             for (int i = 0;i < stacksize;++i)
-                cout << stack[i] << " ";
+                cout << stack.get(i) << " ";
             cout << endl;
             cout << "Stack size: " << stacksize << endl;
             cout << "Top element: " << top << endl;
