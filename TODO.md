@@ -11,7 +11,6 @@
 - [x] ArrayList - Dynamic array with manual resizing
 - [ ] DoublyLinkedList - Bidirectional traversal
 - [ ] BST - Binary Search Tree with traversals
-- [ ] HashTable - With collision resolution
 - [ ] PriorityQueue - Binary heap implementation
 ---
 ## Code Improvements (Future)
@@ -31,6 +30,5 @@
 3. ArrayList
 4. DoublyLinkedList
 5. BST
-6. HashTable
 7. PriorityQueue
 ---
