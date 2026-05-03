@@ -6,7 +6,7 @@
 ## To Implement
 ### Phase 1: Linked List Versions
 - [x] StackLL - Stack using linked list (LIFO)
-- [ ] QueueLL - Queue using linked list (FIFO)
+- [x] QueueLL - Queue using linked list (FIFO)
 ### Phase 2: Additional Data Structures
 - [x] ArrayList - Dynamic array with manual resizing
 - [ ] DoublyLinkedList - Bidirectional traversal
